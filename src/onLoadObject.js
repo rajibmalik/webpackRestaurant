@@ -14,9 +14,29 @@ export const onLoadObject = (function () {
     content.appendChild(imgContainer);
   }
 
-  function loadHeader() {}
+  function loadHeader() {
+    const headerContainer = document.createElement("div");
+    headerContainer.id = "contentHeaderContainer";
 
-  function loadParagraph() {}
+    const header = document.createElement("h1");
+    header.id = "contentHeader";
+    header.textContent = "Restaurant";
+
+    headerContainer.appendChild(header);
+    content.appendChild(headerContainer);
+  }
+
+  function loadParagraph() {
+    const informationContainer = document.createElement("div");
+    informationContainer.id = "contentInformationContainer";
+
+    const paragraph = document.createElement("p");
+    paragraph.id = "contentText";
+    paragraph.textContent = "The restaurant is amazing";
+
+    informationContainer.appendChild(paragraph);
+    content.appendChild(informationContainer);
+  }
 
   return { loadImg, loadHeader, loadParagraph };
 })();
