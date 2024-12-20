@@ -16,14 +16,12 @@ export const aboutTab = (function () {
 
   function createSections() {
     for (let i = 0; i < sectionData.length; i++) {
-      createSection([sectionData[i].person]);
-      createSection([sectionData[i].title]);
-      createSection([sectionData[i].number]);
-      createSection([sectionData[i].email]);
+      const person = sectionData[i];
+      createSection(person.name, person.title, person.number, person.email);
     }
   }
 
-  function createSection(person, title, number, email) {
+  function createSection(name, title, number, email) {
     const sectionContainer = document.createElement("div");
     sectionContainer.classList.add("aboutSection");
 
@@ -31,7 +29,7 @@ export const aboutTab = (function () {
     sectionHeaderContainer.classList.add("aboutSectionHeaderContainer");
 
     const sectionHeader = document.createElement("h3");
-    sectionHeader.textContent = person;
+    sectionHeader.textContent = name;
     sectionHeader.classList.add("aboutSectionHeader");
 
     const informationContainer = document.createElement("div");
