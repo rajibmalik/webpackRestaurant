@@ -25,8 +25,6 @@ export const aboutTab = (function () {
     headerContainer.appendChild(header);
 
     return headerContainer;
-
-    // content.appendChild(headerContainer);
   }
 
   function createSections() {
@@ -44,7 +42,6 @@ export const aboutTab = (function () {
       aboutSectionContainer.appendChild(aboutSection);
     }
     return aboutSectionContainer;
-    // content.appendChild(aboutSectionContainer);
   }
 
   function createSection(name, title, number, email) {
@@ -63,12 +60,15 @@ export const aboutTab = (function () {
 
     const role = document.createElement("p");
     role.textContent = title;
+    role.classList.add("aboutSectionInfo");
 
     const contact = document.createElement("p");
     contact.textContent = number;
+    contact.classList.add("aboutSectionInfo");
 
     const address = document.createElement("p");
     address.textContent = email;
+    address.classList.add("aboutSectionInfo");
 
     sectionHeaderContainer.appendChild(sectionHeader);
     informationContainer.appendChild(role);
@@ -78,7 +78,6 @@ export const aboutTab = (function () {
     sectionContainer.appendChild(informationContainer);
 
     return sectionContainer;
-    // content.appendChild(sectionContainer);
   }
 
   return { createAboutTab, createHeader, createSections };

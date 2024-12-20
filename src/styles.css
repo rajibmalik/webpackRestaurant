@@ -89,6 +89,15 @@ body {
   height: 300px;
 }
 
-/* .aboutSection {
+.aboutSection {
+}
+
+#aboutTabContainer {
   display: none;
-} */
+  background-color: red;
+}
+
+#aboutTabContainer.active {
+  display: flex;
+  background-color: green;
+}
