@@ -16,7 +16,7 @@ export const aboutTab = (function () {
 
   function createHeader() {
     const headerContainer = document.createElement("div");
-    headerContainer.id = "headerContainer";
+    headerContainer.id = "aboutHeaderContainer";
 
     const header = document.createElement("h1");
     header.id = "aboutHeader";
@@ -29,7 +29,7 @@ export const aboutTab = (function () {
 
   function createSections() {
     const aboutSectionContainer = document.createElement("div");
-    aboutSectionContainer.id = "abouSectionContainer";
+    aboutSectionContainer.id = "aboutSectionContainer";
 
     for (let i = 0; i < sectionData.length; i++) {
       const person = sectionData[i];

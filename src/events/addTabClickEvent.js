@@ -6,6 +6,7 @@ export function addTabClickEvent() {
   const menuBtn = document.querySelector("#menuButton");
   const tabBtns = document.querySelectorAll(".tabButton");
   const aboutTabContainer = document.querySelector("#aboutTabContainer");
+  const servicesTabContainer = document.querySelector("#servicesTabContainer");
 
   tabBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -15,6 +16,8 @@ export function addTabClickEvent() {
 
       if (btn.id === "aboutButton") {
         aboutTabContainer.classList.add("active");
+      } else if (btn.id === "servicesButton") {
+        servicesTabContainer.classList.add("active");
       }
     });
   });
