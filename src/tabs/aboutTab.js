@@ -2,6 +2,18 @@ import { sectionData } from "./data/aboutTabData";
 export const aboutTab = (function () {
   const content = document.querySelector("#content");
 
+  function createAboutTab() {
+    const aboutTabContainer = document.createElement("div");
+    aboutTabContainer.id = "aboutTabContainer";
+
+    const header = createHeader();
+    const aboutSection = createSections();
+
+    aboutTabContainer.appendChild(header);
+    aboutTabContainer.appendChild(aboutSection);
+    content.appendChild(aboutTabContainer);
+  }
+
   function createHeader() {
     const headerContainer = document.createElement("div");
     headerContainer.id = "headerContainer";
@@ -11,14 +23,28 @@ export const aboutTab = (function () {
     header.textContent = "About Us";
 
     headerContainer.appendChild(header);
-    content.appendChild(headerContainer);
+
+    return headerContainer;
+
+    // content.appendChild(headerContainer);
   }
 
   function createSections() {
+    const aboutSectionContainer = document.createElement("div");
+    aboutSectionContainer.id = "abouSectionContainer";
+
     for (let i = 0; i < sectionData.length; i++) {
       const person = sectionData[i];
-      createSection(person.name, person.title, person.number, person.email);
+      const aboutSection = createSection(
+        person.name,
+        person.title,
+        person.number,
+        person.email
+      );
+      aboutSectionContainer.appendChild(aboutSection);
     }
+    return aboutSectionContainer;
+    // content.appendChild(aboutSectionContainer);
   }
 
   function createSection(name, title, number, email) {
@@ -50,8 +76,10 @@ export const aboutTab = (function () {
     informationContainer.appendChild(address);
     sectionContainer.appendChild(sectionHeaderContainer);
     sectionContainer.appendChild(informationContainer);
-    content.appendChild(sectionContainer);
+
+    return sectionContainer;
+    // content.appendChild(sectionContainer);
   }
 
-  return { createHeader, createSections };
+  return { createAboutTab, createHeader, createSections };
 })();

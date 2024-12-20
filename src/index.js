@@ -7,5 +7,4 @@ onLoadObject.loadImg();
 onLoadObject.loadHeader();
 onLoadObject.loadParagraph();
 
-aboutTab.createHeader();
-aboutTab.createSections();
+aboutTab.createAboutTab();
