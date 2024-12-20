@@ -93,21 +93,9 @@ body {
 }
 
 #aboutTabContainer {
-  display: none;
+  /* display: non; */
   background-color: red;
 }
 
-#aboutTabContainer.active {
-  display: flex;
-  flex-direction: column;
-  background-color: green;
-}
-
 #servicesTabContainer {
-  display: none;
-}
-
-#servicesTabContainer.active {
-  display: flex;
-  flex-direction: column;
 }

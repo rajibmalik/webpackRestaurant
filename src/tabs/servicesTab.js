@@ -1,8 +1,6 @@
 import { servicesData } from "./data/servicesTabData";
 
 export const servicesTab = (function () {
-  const content = document.querySelector("#content");
-
   function createServicesTab() {
     const servicesTabContainer = document.createElement("div");
     servicesTabContainer.id = "servicesTabContainer";
@@ -12,7 +10,8 @@ export const servicesTab = (function () {
 
     servicesTabContainer.appendChild(header);
     servicesTabContainer.appendChild(servicesSections);
-    content.appendChild(servicesTabContainer);
+
+    return servicesTabContainer;
   }
 
   function createHeader() {
@@ -40,8 +39,6 @@ export const servicesTab = (function () {
     });
 
     return servicesSectionContainer;
-
-    // content.appendChild(servicesSectionContainer);
   }
 
   function createSection(service, text) {
@@ -71,8 +68,6 @@ export const servicesTab = (function () {
     informationContainer.appendChild(information);
     sectionContainer.appendChild(servicesHeaderContainer);
     sectionContainer.appendChild(informationContainer);
-
-    // content.appendChild(sectionContainer);
 
     return sectionContainer;
   }

@@ -1,7 +1,5 @@
 import { sectionData } from "./data/aboutTabData";
 export const aboutTab = (function () {
-  const content = document.querySelector("#content");
-
   function createAboutTab() {
     const aboutTabContainer = document.createElement("div");
     aboutTabContainer.id = "aboutTabContainer";
@@ -11,7 +9,7 @@ export const aboutTab = (function () {
 
     aboutTabContainer.appendChild(header);
     aboutTabContainer.appendChild(aboutSection);
-    content.appendChild(aboutTabContainer);
+    return aboutTabContainer;
   }
 
   function createHeader() {
@@ -80,5 +78,5 @@ export const aboutTab = (function () {
     return sectionContainer;
   }
 
-  return { createAboutTab, createHeader, createSections };
+  return { createAboutTab };
 })();

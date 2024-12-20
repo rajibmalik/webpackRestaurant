@@ -11,4 +11,5 @@ onLoadObject.loadParagraph();
 
 aboutTab.createAboutTab();
 servicesTab.createServicesTab();
+
 addTabClickEvent();

@@ -1,23 +1,19 @@
-import { aboutTab } from "../tabs/aboutTab";
+import { aboutTab } from "../tabs/aboutTab.js";
+import { servicesTab } from "../tabs/servicesTab.js";
 
 export function addTabClickEvent() {
-  const aboutBtn = document.querySelector("#aboutButton");
-  const homeBtn = document.querySelector("#homeButton");
-  const menuBtn = document.querySelector("#menuButton");
   const tabBtns = document.querySelectorAll(".tabButton");
-  const aboutTabContainer = document.querySelector("#aboutTabContainer");
-  const servicesTabContainer = document.querySelector("#servicesTabContainer");
+  const content = document.querySelector("#content");
 
   tabBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      tabBtns.forEach((btn) => {
-        aboutTabContainer.classList.remove("active");
-      });
+      content.innerHTML = "";
 
       if (btn.id === "aboutButton") {
-        aboutTabContainer.classList.add("active");
+        console.log("click");
+        content.appendChild(aboutTab.createAboutTab());
       } else if (btn.id === "servicesButton") {
-        servicesTabContainer.classList.add("active");
+        content.appendChild(servicesTab.createServicesTab());
       }
     });
   });
