@@ -12,5 +12,3 @@ onLoadObject.loadParagraph();
 aboutTab.createAboutTab();
 servicesTab.createServicesTab();
 addTabClickEvent();
-
-// servicesTab.createSection("Paper", "We sell paper");
