@@ -33,7 +33,6 @@ export const servicesTab = (function () {
     servicesSectionContainer.id = "servicesSectionContainer";
 
     data.forEach((service) => {
-      console.log("YO");
       const section = createSection(service.service, service.text);
       servicesSectionContainer.appendChild(section);
     });
@@ -44,13 +43,6 @@ export const servicesTab = (function () {
   function createSection(service, text) {
     const sectionContainer = document.createElement("div");
     sectionContainer.classList.add("servicesSection");
-
-    const servicesHeaderContainer = document.createElement("div");
-    servicesHeaderContainer.classList.add("servicesSectionHeaderContainer");
-
-    const servicesHeader = document.createElement("h3");
-    servicesHeader.textContent = "Services";
-    servicesHeader.classList.add("serviceSectionHeader");
 
     const informationContainer = document.createElement("div");
     informationContainer.classList.add("servicesInformationContainer");
@@ -63,10 +55,8 @@ export const servicesTab = (function () {
     information.classList.add("servicesSectionInformation");
     information.textContent = text;
 
-    servicesHeaderContainer.appendChild(servicesHeader);
     informationContainer.appendChild(informationHeader);
     informationContainer.appendChild(information);
-    sectionContainer.appendChild(servicesHeaderContainer);
     sectionContainer.appendChild(informationContainer);
 
     return sectionContainer;
