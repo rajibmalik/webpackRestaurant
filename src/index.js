@@ -1,10 +1,9 @@
 import "./styles.css";
 import "./images/restaurant.jpg";
-import { aboutTab } from "./tabs/aboutTab.js";
-import { servicesTab } from "./tabs/servicesTab.js";
+import { homeTab } from "./tabs/homeTab.js";
 import { addTabClickEvent } from "./events/addTabClickEvent.js";
 
-aboutTab.createAboutTab();
-servicesTab.createServicesTab();
+const content = document.querySelector("#content");
+content.appendChild(homeTab.createHomeTab());
 
 addTabClickEvent();

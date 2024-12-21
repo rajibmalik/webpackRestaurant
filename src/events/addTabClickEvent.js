@@ -1,5 +1,6 @@
 import { aboutTab } from "../tabs/aboutTab.js";
 import { servicesTab } from "../tabs/servicesTab.js";
+import { homeTab } from "../tabs/homeTab.js";
 
 export function addTabClickEvent() {
   const tabBtns = document.querySelectorAll(".tabButton");
@@ -14,6 +15,8 @@ export function addTabClickEvent() {
         content.appendChild(aboutTab.createAboutTab());
       } else if (btn.id === "servicesButton") {
         content.appendChild(servicesTab.createServicesTab());
+      } else if (btn.id === "homeButton") {
+        content.appendChild(homeTab.createHomeTab());
       }
     });
   });
