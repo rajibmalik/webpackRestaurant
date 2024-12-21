@@ -1,3 +1,5 @@
+import officePhoto from "../images/officePhoto.jpeg";
+
 export const homeTab = (function () {
   function createHomeTab() {
     const homeTabContainer = document.createElement("div");
@@ -18,7 +20,7 @@ export const homeTab = (function () {
 
     const header = document.createElement("h1");
     header.id = "homeHeader";
-    header.textContent = "Home";
+    header.textContent = "Dunder Mifflin";
 
     headerContainer.appendChild(header);
 
@@ -34,14 +36,16 @@ export const homeTab = (function () {
 
     const sectionHeader = document.createElement("h3");
     sectionHeader.classList.add("homeSectionHeader");
-    sectionHeader.textContent = "What we do";
+    sectionHeader.textContent = "The people person's paper people";
 
     const informationContainer = document.createElement("div");
     informationContainer.classList.add("homeInformationContainer");
 
     const information = document.createElement("p");
     information.classList.add("homeInformation");
-    information.textContent = "This is information on us";
+    information.textContent = `Proudly serving Scranton and beyond with the finest paper products.
+       Whether you need reams for your business or cardstock for your crafts
+       we're the best and only paper company you will ever need.`;
 
     sectionHeaderContainer.appendChild(sectionHeader);
     informationContainer.appendChild(information);
