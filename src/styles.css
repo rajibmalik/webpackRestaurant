@@ -78,7 +78,6 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
 }
 
 body {
@@ -98,7 +97,6 @@ body {
   justify-content: start;
   align-items: center;
   width: fit-content;
-  background-color: bisque;
 }
 
 #logoImg {
@@ -109,7 +107,6 @@ body {
 #navBar {
   display: flex;
   justify-content: space-between;
-  background-color: aqua;
   width: 100%;
   padding: 25px;
 }
@@ -128,18 +125,18 @@ body {
 }
 
 #homeTabContainer,
-#servicesTabContainer {
+#servicesTabContainer,
+#aboutTabContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: red;
 }
 
 #homeHeaderContainer,
-#servicesHeaderContainer {
-  background-color: blue;
+#servicesHeaderContainer,
+#aboutHeaderContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,8 +144,8 @@ body {
 }
 
 #homeHeader,
-#servicesHeader {
-  background-color: blue;
+#servicesHeader,
+#aboutHeader {
   font-weight: bold;
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -156,7 +153,6 @@ body {
 
 .homeSection,
 .servicesSection {
-  background-color: aqua;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,10 +161,52 @@ body {
   width: 100%;
 }
 
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 #servicesSectionContainer {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
+}
+
+#aboutSectionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+}
+
+.aboutSection {
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+}
+
+.aboutSectionHeaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutSectionHeader {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.aboutSectionInformationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
   width: 100%;
 }
 
@@ -177,7 +215,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: green;
 }
 
 .homeSectionHeader,
@@ -200,7 +237,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
   width: 80%;
 }
 
@@ -218,7 +254,4 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.servicesSectionInformation {
 }
